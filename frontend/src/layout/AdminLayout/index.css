@@ -1,0 +1,155 @@
+/* สไตล์สำหรับ Sidebar */
+.custom-sider {
+  background: #0c1327 !important; /* สีพื้นหลังของ Sidebar */
+  width: 15vw !important; /* กำหนดความกว้างของ Sidebar */
+  height: 100vh !important; /* Sidebar เต็มความสูงของหน้าจอ */
+  border-right: 3px solid #007bff; /* เส้นขอบขวา */
+  position: fixed !important; /* ตรึง Sidebar ในตำแหน่งคงที่ */
+  top: 0; /* เริ่มที่ด้านบนสุด */
+  left: 0; /* วางที่ด้านซ้าย */
+  overflow-y: auto !important; /* เพิ่ม Scroll ในกรณี Sidebar ยาวเกินหน้าจอ */
+  z-index: 1000; /* คง Sidebar ไว้ด้านบนสุด */
+}
+
+/* สไตล์สำหรับ Content */
+.custom-content {
+  background: #feffff !important; /* สีพื้นหลังขาว */
+  margin-left: 200px !important; /* ระยะห่างจาก Sidebar */
+  padding: 20px; /* เพิ่ม Padding เพื่อไม่ให้ Content ติดขอบ */
+  min-height: 100vh !important; /* ความสูงขั้นต่ำเต็มหน้าจอ */
+  box-sizing: border-box !important; /* นำ Padding มารวมในขนาดขององค์ประกอบ */
+  overflow-y: auto !important; /* เพิ่ม Scroll ในกรณีที่ Content ยาวเกินหน้าจอ */
+}
+
+/* Media Query สำหรับหน้าจอที่เล็กกว่า 768px (มือถือหรือแท็บเล็ต) */
+@media (max-width: 768px) {
+  .custom-sider {
+    width: 50vw !important; /* กำหนดความกว้างของ Sidebar ให้เป็น 50% ของหน้าจอ */
+  }
+
+  .custom-content {
+    margin-left: 50vw !important; /* ปรับระยะห่างของ Content ให้สัมพันธ์กับ Sidebar */
+    width: calc(100vw - 50vw) !important; /* ความกว้างของ Content ปรับตามขนาดใหม่ของ Sidebar */
+  }
+}
+
+/* Media Query สำหรับหน้าจอที่เล็กกว่า 480px (มือถือขนาดเล็ก) */
+@media (max-width: 480px) {
+  .custom-sider {
+    width: 100vw !important; /* Sidebar เต็มความกว้างหน้าจอ */
+    height: auto !important; /* ความสูง Sidebar ปรับตามเนื้อหา */
+    position: relative !important; /* ปรับให้ Sidebar ไม่ตรึงคงที่ */
+    border-right: none !important; /* เอาเส้นขอบขวาออก */
+  }
+
+  .custom-content {
+    margin-left: 0 !important; /* ให้ Content เริ่มต้นที่ 0 ไม่ต้องเว้นระยะจาก Sidebar */
+    width: 100vw !important; /* ความกว้างเต็มหน้าจอ */
+    margin-top: 10px; /* เพิ่มระยะห่างจาก Sidebar */
+  }
+}
+
+
+/* กำหนดพื้นหลังสำหรับ Menu */
+.ant-menu {
+  background: #0c1327 !important;
+}
+
+/* กำหนดสีของไอเทมใน Menu */
+.custom-menu .ant-menu-item {
+  color: #ffffff !important;
+  font-size: 16px !important;
+}
+
+/* กำหนดพื้นหลังของไอเทมที่ถูกเลือกใน Menu */
+.custom-menu .ant-menu-item-selected {
+  background: #007bff !important;
+  color: #ffffff !important;
+}
+
+/* กำหนดพื้นหลังของไอเทมใน Menu เมื่อวางเมาส์ */
+.custom-menu .ant-menu-item:hover {
+  background: #00438b !important;
+  color: #ffffff !important;
+}
+
+/* สไตล์สำหรับ SubMenu */
+.custom-menu .ant-menu-submenu-title {
+  color: #ffffff !important; /* สีของตัวอักษรใน SubMenu */
+  font-size: 16px !important; /* ขนาดตัวอักษร */
+  background: #1b0ba7 !important; /* สีพื้นหลังของ SubMenu title */
+}
+
+/* สไตล์สำหรับ SubMenu */
+.custom-menu-submenu {
+  background: #1b0ba7 !important; /* สีพื้นหลังของ SubMenu */
+}
+
+/* สไตล์สำหรับ SubMenu items */
+.custom-menu-submenu .ant-menu-item {
+  color: #ffffff !important; /* สีของข้อความใน dropdown */
+  font-size: 16px !important; /* ขนาดตัวอักษร */
+  padding: 8px 30px !important; /* ระยะห่างภายใน */
+  opacity: 0.5; /* ความจางของ item ที่ยังไม่ถูกเลือก */
+  transition: opacity 0.3s ease, background-color 0.3s ease; /* การเปลี่ยนแปลงความจางและสีพื้นหลัง */
+}
+
+/* สไตล์สำหรับ SubMenu items เมื่อวางเมาส์ */
+.custom-menu-submenu .ant-menu-item:hover {
+  background-color: #007bff !important; /* สีพื้นหลังของ dropdown item เมื่อวางเมาส์ */
+  color: #ffffff !important; /* สีของข้อความใน dropdown item เมื่อวางเมาส์ */
+  opacity: 1; /* ความจางเต็มที่เมื่อวางเมาส์ */
+  text-align: left; /* จัดแนวข้อความไปทางซ้าย */
+}
+
+/* กำหนดสีพื้นหลังของ SubMenu item ที่ถูกเลือก */
+.custom-menu-submenu .ant-menu-item-selected {
+  background-color: #007bff !important; /* สีพื้นหลังของ SubMenu item ที่เลือก */
+  color: #ffffff !important; /* สีข้อความ */
+  opacity: 1; /* ความจางเต็มที่เมื่อถูกเลือก */
+  text-align: left; /* จัดแนวข้อความไปทางซ้าย */
+}
+
+
+/* สไตล์สำหรับข้อมูลผู้ใช้ */
+.user-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+}
+
+.user-info-container img {
+  width: 100px !important; /* ปรับขนาดของภาพ */
+  height: 100px !important;
+  border-radius: 10% !important;
+  object-fit: cover;
+  margin-bottom: 0px !important;
+}
+
+.user-info-container .id {
+  font-size: 14px !important; /* ขนาดตัวอักษรสำหรับ ID */
+  color: #ffffff !important; /* สีของ ID */
+  margin-bottom: 5px !important; /* ระยะห่างระหว่าง ID และชื่อ */
+}
+
+.user-info-container .name {
+  font-size: 16px !important; /* ขนาดตัวอักษรสำหรับชื่อ */
+  color: #ffffff !important; /* สีของชื่อ */
+}
+/* เพิ่มสไตล์สำหรับปุ่มออกจากระบบ */
+.logout-container {
+  position: absolute;
+  bottom: 20px; /* ระยะห่างจากด้านล่าง */
+  width: 100%; /* ให้เต็มความกว้างของ Sider */
+  padding: 0 16px; /* เพิ่ม padding ซ้ายขวา */
+  display: flex;
+  justify-content: center; /* จัดกลาง */
+}
+
+.logout-button {
+  background-color: #ff4d4f !important; /* สีพื้นหลังที่แตกต่าง */
+  border-color: #ff4d4f !important; /* สีขอบที่แตกต่าง */
+  color: #ffffff !important; /* สีข้อความ */
+}
+

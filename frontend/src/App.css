@@ -1,0 +1,56 @@
+
+body {
+    margin: 0;
+  }
+  .login {
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    /* overflow: scroll; */
+    background-color: #192545;
+    background-image: url('../src/assets/back.png'); /* ใส่ URL ของรูปที่คุณต้องการ */
+    background-size: cover; /* ปรับขนาดของรูปให้ครอบคลุมพื้นที่ทั้งหมด */
+    background-position: center; /* จัดตำแหน่งรูปให้อยู่ตรงกลาง */
+  }
+  .login-admin {
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    /* overflow: scroll; */
+    background-color: #021365;
+  }
+  .header {
+    text-align: center;
+  }
+  .card-login {
+    overflow-y: scroll;
+    width: 60%;
+    height: auto;
+    max-height: 550px;
+    border-radius: 0px; /* ปรับมุมของการ์ดให้นุ่มนวล */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* ขอบโปร่งใสเล็กน้อย */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.9); /* เพิ่มเงาเบาๆ ให้การ์ดมีมิติ */
+    backdrop-filter: blur(10px); /* ทำให้พื้นหลังของการ์ดเบลอเล็กน้อย */
+    padding: 20px;
+  }
+  .images-logo {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    object-fit: contain;
+  }
+  .images-admin-logo {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    object-fit: contain;
+  }
+  .login-form-button {
+    width: 100%;
+    background-color: #294984; /* สีพื้นหลังของปุ่ม student */
+  }
+  .admin-form-button {
+    width: 100%;
+    background-color: #14288a; /* สีพื้นหลังของปุ่ม admin */
+  }
+  
